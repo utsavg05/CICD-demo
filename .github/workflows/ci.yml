@@ -56,6 +56,6 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             docker pull ${{ secrets.DOCKER_USERNAME }}/cicd-demo:latest
-            docker stop app || true
+            docker stop app1 || true
             docker rm app || true
             docker run -d -p 3000:3000 --name app ${{ secrets.DOCKER_USERNAME }}/cicd-demo:latest    
