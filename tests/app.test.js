@@ -5,6 +5,6 @@ describe("GET /", () => {
   it("should return message", async () => {
     const res = await request(app).get("/");
     expect(res.statusCode).toBe(200);
-    expect(res.body.message).toBe("CICD is running!");
+    expect(res.body.message).toBe("Automated CICD deploy to EC2!");
   });
 });
